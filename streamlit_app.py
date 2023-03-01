@@ -71,29 +71,20 @@ st.title("Welcome")
 
 #gsheet_connector = connect_to_gsheet()
 
-#st.sidebar.write(
-#    f"This app shows how a Streamlit app can interact easily with a [Google Sheet]({GSHEET_URL}) to read or store data."
-#)
 
-st.sidebar.write(
-    f"[Read more](https://docs.streamlit.io/knowledge-base/tutorials/databases/public-gsheet) about connecting your Streamlit app to Google Sheets."
-)
-
-button = st.button("Volunteer Sign In", key="signInButton", help="Click here to check in for volunteer shift")
-#sign_out_button = st.button("Volunteer Sign Out", key="signOutButton", help="Click here to check out after a volunteer shift", on_click=None, disabled=False, use_container_width=False)
-#employee_button = st.button("Employee Access", key="employeeButton", help="Click here to access employee information", on_click=None, disabled=False, use_container_width=False)
-
-with button:
-    submitted = st.form_submit_button(label="Submit")
+sing_in_button = st.button("Volunteer Sign In", key="signInButton", help="Click here to check in for volunteer shift")
+sign_out_button = st.button("Volunteer Sign Out", key="signOutButton", help="Click here to check out after a volunteer shift")
+employee_button = st.button("Employee Access", key="employeeButton", help="Click here to access employee information")
 
 
-if submitted:
+
+#if submitted:
     #add_row_to_gsheet(
     #    gsheet_connector,
     #    [[author, bug_type, comment, str(date), bug_severity]],
     #)
-    st.success("Success!")
-    st.balloons()
+    #st.success("Success!")
+    #st.balloons()
 
 #expander = st.expander("See all records")
 #with expander:
