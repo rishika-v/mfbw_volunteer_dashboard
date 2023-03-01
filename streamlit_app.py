@@ -9,7 +9,7 @@ from googleapiclient.http import HttpRequest
 SCOPE = "https://www.googleapis.com/auth/spreadsheets"
 SPREADSHEET_ID = "1QlPTiVvfRM82snGN6LELpNkOwVI1_Mp9J9xeJe-QoaA"
 SHEET_NAME = "Database"
-GSHEET_URL = f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}"
+#GSHEET_URL = f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}"
 
 
 @st.experimental_singleton()
@@ -95,14 +95,14 @@ with form:
 
 
 if submitted:
-    add_row_to_gsheet(
-        gsheet_connector,
-        [[author, bug_type, comment, str(date), bug_severity]],
-    )
+    #add_row_to_gsheet(
+    #    gsheet_connector,
+    #    [[author, bug_type, comment, str(date), bug_severity]],
+    #)
     st.success("Thanks! Your bug was recorded.")
     st.balloons()
 
-expander = st.expander("See all records")
-with expander:
-    st.write(f"Open original [Google Sheet]({GSHEET_URL})")
-    st.dataframe(get_data(gsheet_connector))
+#expander = st.expander("See all records")
+#with expander:
+    #st.write(f"Open original [Google Sheet]({GSHEET_URL})")
+    #dataframe(get_data(gsheet_connector))
