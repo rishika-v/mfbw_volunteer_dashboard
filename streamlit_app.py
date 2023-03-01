@@ -72,9 +72,9 @@ st.title("Welcome")
 #gsheet_connector = connect_to_gsheet()
 
 
-sign_in_button = st.button("Volunteer Sign In", key="signInButton", help="Click here to check in for volunteer shift", type="primary")
-sign_out_button = st.button("Volunteer Sign Out", key="signOutButton", help="Click here to check out after a volunteer shift", type="primary")
-employee_button = st.button("Employee Access", key="employeeButton", help="Click here to access employee information",type="primary")
+sign_in_button = st.button("Volunteer Sign In", key="signInButton", help="Click here to check in for volunteer shift")
+sign_out_button = st.button("Volunteer Sign Out", key="signOutButton", help="Click here to check out after a volunteer shift")
+employee_button = st.button("Employee Access", key="employeeButton", help="Click here to access employee information")
 
 #if submitted:
     #add_row_to_gsheet(
