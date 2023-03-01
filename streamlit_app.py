@@ -65,9 +65,9 @@ def add_row_to_gsheet(gsheet_connector, row) -> None:
     ).execute()
 
 
-st.set_page_config(page_title="Bug report", page_icon="🐞", layout="centered")
+st.set_page_config(page_title="Welcome", layout="centered")
 
-st.title("🐞 Bug report!")
+st.title("Welcome")
 
 #gsheet_connector = connect_to_gsheet()
 
@@ -79,18 +79,11 @@ st.sidebar.write(
     f"[Read more](https://docs.streamlit.io/knowledge-base/tutorials/databases/public-gsheet) about connecting your Streamlit app to Google Sheets."
 )
 
-form = st.form(key="annotation")
+button = st.button("Volunteer Sign In", key="signInButton", help="Click here to check in for volunteer shift", on_click=None, disabled=False, use_container_width=False)
+sign_out_button = st.button("Volunteer Sign Out", key="signOutButton", help="Click here to check out after a volunteer shift", on_click=None, disabled=False, use_container_width=False)
+employee_button = st.button("Employee Access", key="employeeButton", help="Click here to access employee information", on_click=None, disabled=False, use_container_width=False)
 
-with form:
-    cols = st.columns((1, 1))
-    author = cols[0].text_input("Report author:")
-    bug_type = cols[1].selectbox(
-        "Bug type:", ["Front-end", "Back-end", "Data related", "404"], index=2
-    )
-    comment = st.text_area("Comment:")
-    cols = st.columns(2)
-    date = cols[0].date_input("Bug date occurrence:")
-    bug_severity = cols[1].slider("Bug severity:", 1, 5, 2)
+with button:
     submitted = st.form_submit_button(label="Submit")
 
 
@@ -99,7 +92,7 @@ if submitted:
     #    gsheet_connector,
     #    [[author, bug_type, comment, str(date), bug_severity]],
     #)
-    st.success("Thanks! Your bug was recorded.")
+    st.success("Success!")
     st.balloons()
 
 #expander = st.expander("See all records")
