@@ -9,7 +9,7 @@ from googleapiclient.http import HttpRequest
 SCOPE = "https://www.googleapis.com/auth/spreadsheets"
 SPREADSHEET_ID = "1QlPTiVvfRM82snGN6LELpNkOwVI1_Mp9J9xeJe-QoaA"
 SHEET_NAME = "Database"
-GSHEET_URL = f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}"
+#GSHEET_URL = f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}"
 
 
 @st.experimental_singleton()
@@ -65,44 +65,28 @@ def add_row_to_gsheet(gsheet_connector, row) -> None:
     ).execute()
 
 
-st.set_page_config(page_title="Bug report", page_icon="🐞", layout="centered")
+st.set_page_config(page_title="Welcome", layout="centered")
 
-st.title("🐞 Bug report!")
+st.title("Welcome")
 
-gsheet_connector = connect_to_gsheet()
-
-st.sidebar.write(
-    f"This app shows how a Streamlit app can interact easily with a [Google Sheet]({GSHEET_URL}) to read or store data."
-)
-
-st.sidebar.write(
-    f"[Read more](https://docs.streamlit.io/knowledge-base/tutorials/databases/public-gsheet) about connecting your Streamlit app to Google Sheets."
-)
-
-form = st.form(key="annotation")
-
-with form:
-    cols = st.columns((1, 1))
-    author = cols[0].text_input("Report author:")
-    bug_type = cols[1].selectbox(
-        "Bug type:", ["Front-end", "Back-end", "Data related", "404"], index=2
-    )
-    comment = st.text_area("Comment:")
-    cols = st.columns(2)
-    date = cols[0].date_input("Bug date occurrence:")
-    bug_severity = cols[1].slider("Bug severity:", 1, 5, 2)
-    submitted = st.form_submit_button(label="Submit")
+#gsheet_connector = connect_to_gsheet()
 
 
-if submitted:
-    add_row_to_gsheet(
-        gsheet_connector,
-        [[author, bug_type, comment, str(date), bug_severity]],
-    )
-    st.success("Thanks! Your bug was recorded.")
-    st.balloons()
+sign_in_button = st.button("Volunteer Sign In", key="signInButton", help="Click here to check in for volunteer shift")
+sign_out_button = st.button("Volunteer Sign Out", key="signOutButton", help="Click here to check out after a volunteer shift")
+employee_button = st.button("Employee Access", key="employeeButton", help="Click here to access employee information")
 
-expander = st.expander("See all records")
-with expander:
-    st.write(f"Open original [Google Sheet]({GSHEET_URL})")
-    st.dataframe(get_data(gsheet_connector))
+st.markdown('<i class="material-icons">{}</i>'.format(sign_in_button), unsafe_allow_html=True)
+
+#if submitted:
+    #add_row_to_gsheet(
+    #    gsheet_connector,
+    #    [[author, bug_type, comment, str(date), bug_severity]],
+    #)
+    #st.success("Success!")
+    #st.balloons()
+
+#expander = st.expander("See all records")
+#with expander:
+    #st.write(f"Open original [Google Sheet]({GSHEET_URL})")
+    #dataframe(get_data(gsheet_connector))
