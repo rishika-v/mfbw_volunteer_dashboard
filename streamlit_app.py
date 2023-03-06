@@ -76,8 +76,6 @@ sign_in_button = st.button("Volunteer Sign In", key="signInButton", help="Click 
 sign_out_button = st.button("Volunteer Sign Out", key="signOutButton", help="Click here to check out after a volunteer shift")
 employee_button = st.button("Employee Access", key="employeeButton", help="Click here to access employee information")
 
-st.markdown('<i class="material-icons">{}</i>'.format(sign_in_button), unsafe_allow_html=True)
-
 #if submitted:
     #add_row_to_gsheet(
     #    gsheet_connector,
