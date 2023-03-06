@@ -1,13 +1,23 @@
 import streamlit as st
+import requests
+import json
+import pandas as pd
+from datetime import datetime
 
+# get list of users as json file?
 
-user_input = st.text_input("Please enter your user id", placeholder="Please enter your user id")
+api_url = ?
+
+users = pd.read_json("?")
+user_names = users["Name"]
+user_input = st.selectbox(label="Please enter your name", options = user_names)
 check_in_button = st.button("Check in")
 
 if check_in_button:
 
-    # API call to read DB and find user object aligned with that name
-    # if that doesn't exist, say no
+    todo = {"id": user_input, "start": datetime.now()}
+    response = requests.post(api_url, json=todo)
+
 
     # API call to create shift, inputting user object
     st.write("Check in successful!")
