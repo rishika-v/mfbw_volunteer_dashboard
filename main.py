@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 
 from streamlit.components.v1 import html
+from streamlit_extras.switch_page_button import switch_page
 
 def nav_page(page_name, timeout_secs=3):
     nav_script = """
@@ -34,10 +35,10 @@ sign_out_button = st.button("Volunteer Sign Out", key="signOutButton", help="Cli
 employee_button = st.button("Employee Access", key="employeeButton", help="Click here to access employee information", on_click=None, disabled=False, use_container_width=False)
 
 if sign_in_button:
-    nav_page("signin")
+    switch_page("signin")
 
 if sign_out_button:
-    nav_page("signout")
+    switch_page("signout")
 
 if employee_button:
-    nav_page("employee")
+    switch_page("employee")
