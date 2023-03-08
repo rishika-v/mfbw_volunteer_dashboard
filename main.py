@@ -29,8 +29,8 @@ def nav_page(page_name, timeout_secs=3):
     """ % (page_name, timeout_secs)
     html(nav_script)
 
-sign_in_button = st.button("Sign In", key="signInButton", help="Click here to check in for volunteer shift", on_click=None, disabled=False, use_container_width=False)
-sign_out_button = st.button("Sign Out", key="signOutButton", help="Click here to check out after a volunteer shift", on_click=None, disabled=False, use_container_width=False)
+sign_in_button = st.button("Sign In", key="signInButton", help="Click here to check in for volunteer shift", on_click=None, disabled=False)
+sign_out_button = st.button("Sign Out", key="signOutButton", help="Click here to check out after a volunteer shift", on_click=None, disabled=False)
 
 if sign_in_button:
     nav_page("signin")
