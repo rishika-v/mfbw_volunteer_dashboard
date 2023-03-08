@@ -4,8 +4,6 @@ import pandas as pd
 
 from streamlit.components.v1 import html
 
-from .. import extra
-
 def nav_page(page_name, timeout_secs=3):
     nav_script = """
         <script type="text/javascript">
