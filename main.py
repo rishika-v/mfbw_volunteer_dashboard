@@ -49,6 +49,7 @@ m = st.markdown("""
         cursor:pointer;
         color:#ffffff;
         font-family:Arial;
+        align = center;
         font-size:25px;
         font-weight:bold;
         padding:6px 12px;
@@ -70,6 +71,7 @@ m = st.markdown("""
         background-color:#77b55a;
         border-radius:4px;
         border:1px solid #4b8f29;
+        align = center;
         display:inline-block;
         cursor:pointer;
         color:#ffffff;
@@ -99,6 +101,7 @@ m = st.markdown("""
         cursor:pointer;
         color:#ffffff;
         font-family:Arial;
+        align = center;
         font-size:25px;
         font-weight:bold;
         padding:6px 12px;
