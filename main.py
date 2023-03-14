@@ -97,7 +97,7 @@ with col2:
         div.stButton > button:first-child {
             box-shadow: 0px 10px 14px -7px #3e7327;
             background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-            background-color:#00ffff;
+            background-color:#33bdef;
             border-radius:4px;
             border:1px solid #4b8f29;
             display:inline-block;
