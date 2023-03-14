@@ -42,16 +42,18 @@ st.markdown(""" <style> div.stButton > button:first-child {
 
 
 
-col1,col2,col3=st.columns([1.5,1.5,1.5])
+col1,col2,col3,col4=st.columns([0.3,1.5,1.5,1.5])
 with col1:
+    st.empty
+with col2:
     sign_in_button = st.button("Volunteer Sign In", key="signInButton", help="Click here to check in for volunteer shift", on_click=None, disabled=False)
     if sign_in_button:
         nav_page("signin")
-with col2:
+with col3:
     sign_out_button = st.button("Volunteer Sign Out", key="signOutButton", help="Click here to check out after a volunteer shift", on_click=None, disabled=False)
     if sign_out_button:
         nav_page("signout")
-with col3:
+with col4:
     employee_button = st.button("Employee Access", key="employeeButton", help="Click here to access employee information", on_click=None, disabled=False)
     if employee_button:
         nav_page("employee")
