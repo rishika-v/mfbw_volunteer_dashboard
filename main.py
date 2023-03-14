@@ -36,85 +36,88 @@ def nav_page(page_name, timeout_secs=3):
     html(nav_script)
 
 
-
-m = st.markdown("""
-    <style>
-    div.stButton > button:first-child {
-        box-shadow: 0px 10px 14px -7px #3e7327;
-        background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-        background-color:#77b55a;
-        border-radius:4px;
-        border:1px solid #4b8f29;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:Arial;
-        text-align = center;
-        font-size:25px;
-        font-weight:bold;
-        padding:6px 12px;
-        text-decoration:none;
-        text-shadow:0px 1px 0px #5b8a3c;
-        height: 5em;
-        width: 15em;
-        }
-        </style>""", unsafe_allow_html=True)
-sign_in_button = st.button("Volunteer Sign In", key="signInButton")
-if sign_in_button:
+col1,col2,col3=st.beta_columns([0.3,1.2,0.3])
+with col1:
+    placeholder = st.empty()
+with col2:
+    m = st.markdown("""
+        <style>
+        div.stButton > button:first-child {
+            box-shadow: 0px 10px 14px -7px #3e7327;
+            background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+            background-color:#77b55a;
+            border-radius:4px;
+            border:1px solid #4b8f29;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            text-align = center;
+            font-size:25px;
+            font-weight:bold;
+            padding:6px 12px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #5b8a3c;
+            height: 5em;
+            width: 15em;
+            }
+            </style>""", unsafe_allow_html=True)
+    sign_in_button = st.button("Volunteer Sign In", key="signInButton")
+    if sign_in_button:
         nav_page("signin")
 
-m = st.markdown("""
-    <style>
-    div.stButton > button:first-child {
-        box-shadow: 0px 10px 14px -7px #3e7327;
-        background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-        background-color:#77b55a;
-        border-radius:4px;
-        border:1px solid #4b8f29;
-        text-align = center;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:Arial;
-        font-size:13px;
-        font-weight:bold;
-        padding:6px 25px;
-        text-decoration:none;
-        text-shadow:0px 1px 0px #5b8a3c;
-        height: 5em;
-        width: 15em;
-        }
-        </style>""", unsafe_allow_html=True)
-sign_out_button = st.button("Volunteer Sign Out", key="signOutButton")
-if sign_out_button:
+    m = st.markdown("""
+        <style>
+        div.stButton > button:first-child {
+            box-shadow: 0px 10px 14px -7px #3e7327;
+            background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+            background-color:#77b55a;
+            border-radius:4px;
+            border:1px solid #4b8f29;
+            text-align = center;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:13px;
+            font-weight:bold;
+            padding:6px 25px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #5b8a3c;
+            height: 5em;
+            width: 15em;
+            }
+            </style>""", unsafe_allow_html=True)
+    sign_out_button = st.button("Volunteer Sign Out", key="signOutButton")
+    if sign_out_button:
         nav_page("signout")
 
-m = st.markdown("""
-    <style>
-    div.stButton > button:first-child {
-        box-shadow: 0px 10px 14px -7px #3e7327;
-        background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-        background-color:#77b55a;
-        border-radius:4px;
-        border:1px solid #4b8f29;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-family:Arial;
-        text-align = center;
-        font-size:25px;
-        font-weight:bold;
-        padding:6px 12px;
-        text-decoration:none;
-        text-shadow:0px 1px 0px #5b8a3c;
-        height: 5em;
-        width: 15em;
-        }
-        </style>""", unsafe_allow_html=True)
-employee_button = st.button("Employee Access", key="employeeButton")
-if employee_button:
+    m = st.markdown("""
+        <style>
+        div.stButton > button:first-child {
+            box-shadow: 0px 10px 14px -7px #3e7327;
+            background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+            background-color:#77b55a;
+            border-radius:4px;
+            border:1px solid #4b8f29;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            text-align = center;
+            font-size:25px;
+            font-weight:bold;
+            padding:6px 12px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #5b8a3c;
+            height: 5em;
+            width: 15em;
+            }
+            </style>""", unsafe_allow_html=True)
+    employee_button = st.button("Employee Access", key="employeeButton")
+    if employee_button:
         nav_page("employee")
 
-
-
+with col3:
+    placeholder2 = st.empty()
 
