@@ -43,7 +43,7 @@ sign_out_button = st.button("Volunteer Sign Out", key="signOutButton", help="Cli
 employee_button = st.button("Employee Access", key="employeeButton", help="Click here to access employee information", on_click=None, disabled=False)
 
 
-col1,col2,col3=st.beta_columns([0.3,1.2,0.3])
+col1,col2,col3=st.columns([0.3,1.2,0.3])
 with col1:
     if sign_in_button:
         nav_page("signin")
