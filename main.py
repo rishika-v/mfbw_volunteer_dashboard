@@ -7,7 +7,8 @@ from streamlit.components.v1 import html
 st.set_page_config(layout="centered", page_icon="🍏", page_title="Bmore Food Volunteer Portal")
 st.title("Bmore Food Volunteer Portal")
 st.header("Welcome! Please log in/log out")
-
+st.markdown("<h1 style='text-align: center; color: blue;'>Bmore Food Volunteer Portal</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: black;'>Welcome! Please log in/log out</h2>", unsafe_allow_html=True)
 unsafe_allow_html = True
 m = st.markdown("""
 <style>
