@@ -44,7 +44,7 @@ st.markdown(""" <style> div.stButton > button:first-child {
 
 col1,col2,col3,col4=st.columns([0.3,1.5,1.5,1.5])
 with col1:
-    st.empty
+    placeholder = st.empty
 with col2:
     sign_in_button = st.button("Volunteer Sign In", key="signInButton", help="Click here to check in for volunteer shift", on_click=None, disabled=False)
     if sign_in_button:
