@@ -52,8 +52,8 @@ div.stButton > button:first-child {
 	padding:6px 12px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #5b8a3c;
-    height: 20em;
-    width: 20em;
+    height: 15em;
+    width: 5em;
 }
 </style>""", unsafe_allow_html=True)
 
