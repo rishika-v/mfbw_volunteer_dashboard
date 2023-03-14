@@ -36,11 +36,8 @@ def nav_page(page_name, timeout_secs=3):
     html(nav_script)
 
 
-col1,col2,col3,col4=st.columns([0.2,1.5,1.5,1.5])
-with col1:
-    placeholder = st.empty
-with col2:
-    m = st.markdown("""
+
+m = st.markdown("""
     <style>
     div.stButton > button:first-child {
         box-shadow: 0px 10px 14px -7px #3e7327;
@@ -61,11 +58,11 @@ with col2:
         width: 15em;
         }
         </style>""", unsafe_allow_html=True)
-    sign_in_button = st.button("Volunteer Sign In", key="signInButton")
-    if sign_in_button:
+sign_in_button = st.button("Volunteer Sign In", key="signInButton")
+if sign_in_button:
         nav_page("signin")
-with col3:
-    m = st.markdown("""
+
+m = st.markdown("""
     <style>
     div.stButton > button:first-child {
         box-shadow: 0px 10px 14px -7px #3e7327;
@@ -86,11 +83,11 @@ with col3:
         width: 15em;
         }
         </style>""", unsafe_allow_html=True)
-    sign_out_button = st.button("Volunteer Sign Out", key="signOutButton")
-    if sign_out_button:
+sign_out_button = st.button("Volunteer Sign Out", key="signOutButton")
+if sign_out_button:
         nav_page("signout")
-with col4:
-    m = st.markdown("""
+
+m = st.markdown("""
     <style>
     div.stButton > button:first-child {
         box-shadow: 0px 10px 14px -7px #3e7327;
@@ -111,8 +108,8 @@ with col4:
         width: 15em;
         }
         </style>""", unsafe_allow_html=True)
-    employee_button = st.button("Employee Access", key="employeeButton")
-    if employee_button:
+employee_button = st.button("Employee Access", key="employeeButton")
+if employee_button:
         nav_page("employee")
 
 
