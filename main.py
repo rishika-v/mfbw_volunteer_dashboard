@@ -5,9 +5,6 @@ import pandas as pd
 from streamlit.components.v1 import html
 
 st.set_page_config(layout="centered", page_icon="🍏", page_title="Bmore Food Volunteer Portal")
-st.markdown("""<style>
-body {background-color: white;}
-</style>""")
 
 st.markdown("<h1 style='text-align: center; color: green;'>Bmore Food Volunteer Portal</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: white;'>Welcome!</h2>", unsafe_allow_html=True)
@@ -44,6 +41,8 @@ div.stButton > button:first-child {
     background-color: rgb(204, 49, 49);
 }
 </style>""", unsafe_allow_html=True)
+
+b = st.button("test")
 
 col1,col2,col3,col4=st.columns([0.3,1.5,1.5,1.5])
 with col1:
