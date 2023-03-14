@@ -6,7 +6,7 @@ from streamlit.components.v1 import html
 
 st.set_page_config(layout="centered", page_icon="🍏", page_title="Bmore Food Volunteer Portal")
 
-st.markdown("<h1 style='text-align: center; color: darkblue;'>Bmore Food Volunteer Portal</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: cyan;'>Bmore Food Volunteer Portal</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center; color: white;'>Welcome!</h2>", unsafe_allow_html=True)
 unsafe_allow_html = True
 
@@ -43,21 +43,19 @@ with col2:
     m = st.markdown("""
         <style>
         div.stButton > button:first-child {
-            box-shadow: 0px 10px 14px -7px #3e7327;
-            background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-            background-color:#00ffff;
-            border-radius:4px;
-            border:1px solid #4b8f29;
+            box-shadow: 0px 1px 0px 0px #f0f7fa;
+            background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+            background-color:#33bdef;
+            border-radius:6px;
+            border:1px solid #057fd0;
             display:inline-block;
             cursor:pointer;
             color:#ffffff;
-            font-family:Arial;
-            text-align = center;
             font-size:25px;
             font-weight:bold;
-            padding:6px 12px;
+            padding:6px 24px;
             text-decoration:none;
-            text-shadow:0px 1px 0px #5b8a3c;
+            text-shadow:0px -1px 0px #5b6178;
             height: 5em;
             width: 15em;
             }
