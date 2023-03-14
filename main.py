@@ -36,7 +36,7 @@ def nav_page(page_name, timeout_secs=3):
     html(nav_script)
 
 
-col1,col2,col3=st.beta_columns([0.3,1.2,0.3])
+col1,col2,col3=st.columns([0.3,1.2,0.3])
 with col1:
     placeholder = st.empty()
 with col2:
