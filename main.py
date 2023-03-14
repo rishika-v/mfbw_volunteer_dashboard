@@ -34,39 +34,12 @@ def nav_page(page_name, timeout_secs=3):
     """ % (page_name, timeout_secs)
     html(nav_script)
 
-st.markdown(""" <style> div.stButton > button:first-child {
-    color: #4F8BF9;
-    border-radius: 20%;
-    } </style>""", unsafe_allow_html=True)
-
-
-st.markdown("""<a href="#" div.stbutton >green</a>
-
-.myButton {
-	box-shadow: 0px 10px 14px -7px #3e7327;
-	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-	background-color:#77b55a;
-	border-radius:4px;
-	border:1px solid #4b8f29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:13px;
-	font-weight:bold;
-	padding:6px 12px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #5b8a3c;
+m = st.markdown("""
+<style>
+div.stButton > button:first-child {
+    background-color: rgb(204, 49, 49);
 }
-.myButton:hover {
-	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
-	background-color:#72b352;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}""")
-
+</style>""", unsafe_allow_html=True)
 
 col1,col2,col3,col4=st.columns([0.3,1.5,1.5,1.5])
 with col1:
