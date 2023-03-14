@@ -47,8 +47,7 @@ m = st.markdown("""
         display:inline-block;
         cursor:pointer;
         color:#ffffff;
-        font-family:Arial;
-        font-size:13px;
+        font-size:25px;
         font-weight:bold;
         padding:6px 12px;
         text-decoration:none;
@@ -57,7 +56,7 @@ m = st.markdown("""
         width: 15em;
         }
         </style>""", unsafe_allow_html=True)
-b = st.button("test")
+b = st.button("test", key="signInButton")
 
 
 col1,col2,col3,col4=st.columns([0.3,1.5,1.5,1.5])
