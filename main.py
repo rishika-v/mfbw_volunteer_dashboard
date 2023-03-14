@@ -56,7 +56,7 @@ m = st.markdown("""
         width: 15em;
         }
         </style>""", unsafe_allow_html=True)
-b = st.button("test", key="signInBuon")
+b = st.button("test", key="signInBuon", help="Click here to check in for volunteer")
 
 
 col1,col2,col3,col4=st.columns([0.3,1.5,1.5,1.5])
