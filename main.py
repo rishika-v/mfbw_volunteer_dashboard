@@ -35,6 +35,31 @@ def nav_page(page_name, timeout_secs=3):
     """ % (page_name, timeout_secs)
     html(nav_script)
 
+
+m = st.markdown("""
+    <style>
+    div.stButton > button:first-child {
+        box-shadow: 0px 10px 14px -7px #3e7327;
+        background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+        background-color:#77b55a;
+        border-radius:4px;
+        border:1px solid #4b8f29;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:13px;
+        font-weight:bold;
+        padding:6px 12px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #5b8a3c;
+        height: 5em;
+        width: 15em;
+        }
+        </style>""", unsafe_allow_html=True)
+b = st.button("test")
+
+
 col1,col2,col3,col4=st.columns([0.3,1.5,1.5,1.5])
 with col1:
     placeholder = st.empty
