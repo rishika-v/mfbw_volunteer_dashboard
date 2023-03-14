@@ -60,7 +60,7 @@ with col2:
         width: 15em;
         }
         </style>""", unsafe_allow_html=True)
-    sign_in_button = st.button("Volunteer Sign In", key="signInButton", help="Click here to check in for volunteer shift", on_click=None, disabled=False)
+    sign_in_button = st.button("Volunteer Sign In", key="signInButton", help="Click here to check in for volunteer shift")
     if sign_in_button:
         nav_page("signin")
 with col3:
