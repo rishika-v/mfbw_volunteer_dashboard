@@ -36,7 +36,7 @@ def nav_page(page_name, timeout_secs=3):
     html(nav_script)
 
 
-col1,col2,col3,col4=st.columns([0.3,1.5,1.5,1.5])
+col1,col2,col3,col4=st.columns([0.2,1.5,1.5,1.5])
 with col1:
     placeholder = st.empty
 with col2:
@@ -52,7 +52,7 @@ with col2:
         cursor:pointer;
         color:#ffffff;
         font-family:Arial;
-        font-size:13px;
+        font-size:25px;
         font-weight:bold;
         padding:6px 12px;
         text-decoration:none;
@@ -79,7 +79,7 @@ with col3:
         font-family:Arial;
         font-size:13px;
         font-weight:bold;
-        padding:6px 12px;
+        padding:6px 25px;
         text-decoration:none;
         text-shadow:0px 1px 0px #5b8a3c;
         height: 5em;
@@ -102,7 +102,7 @@ with col4:
         cursor:pointer;
         color:#ffffff;
         font-family:Arial;
-        font-size:13px;
+        font-size:25px;
         font-weight:bold;
         padding:6px 12px;
         text-decoration:none;
