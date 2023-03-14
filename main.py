@@ -36,29 +36,6 @@ def nav_page(page_name, timeout_secs=3):
     html(nav_script)
 
 
-m = st.markdown("""
-    <style>
-    div.stButton > button:first-child {
-        box-shadow: 0px 10px 14px -7px #3e7327;
-        background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-        background-color:#77b55a;
-        border-radius:4px;
-        border:1px solid #4b8f29;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffffff;
-        font-size:25px;
-        font-weight:bold;
-        padding:6px 12px;
-        text-decoration:none;
-        text-shadow:0px 1px 0px #5b8a3c;
-        height: 5em;
-        width: 15em;
-        }
-        </style>""", unsafe_allow_html=True)
-b = st.button("test", key="signInBuon", help="Click here to check in for volunteer")
-
-
 col1,col2,col3,col4=st.columns([0.3,1.5,1.5,1.5])
 with col1:
     placeholder = st.empty
@@ -84,7 +61,7 @@ with col2:
         width: 15em;
         }
         </style>""", unsafe_allow_html=True)
-    sign_in_button = st.button("Volunteer Sign In", key="signInButton", help="Click here to check in for volunteer shift")
+    sign_in_button = st.button("Volunteer Sign In", key="signInButton")
     if sign_in_button:
         nav_page("signin")
 with col3:
@@ -109,7 +86,7 @@ with col3:
         width: 15em;
         }
         </style>""", unsafe_allow_html=True)
-    sign_out_button = st.button("Volunteer Sign Out", key="signOutButton", help="Click here to check out after a volunteer shift", on_click=None, disabled=False)
+    sign_out_button = st.button("Volunteer Sign Out", key="signOutButton")
     if sign_out_button:
         nav_page("signout")
 with col4:
@@ -134,7 +111,7 @@ with col4:
         width: 15em;
         }
         </style>""", unsafe_allow_html=True)
-    employee_button = st.button("Employee Access", key="employeeButton", help="Click here to access employee information", on_click=None, disabled=False)
+    employee_button = st.button("Employee Access", key="employeeButton")
     if employee_button:
         nav_page("employee")
 
