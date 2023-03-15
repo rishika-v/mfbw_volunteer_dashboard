@@ -51,7 +51,7 @@ with col2:
             display:inline-block;
             cursor:pointer;
             color:#ffffff;
-            font-size:25px;
+            font-size:20px;
             font-weight:bold;
             padding:6px 24px;
             text-decoration:none;
